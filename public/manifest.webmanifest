@@ -1,0 +1,6 @@
+{
+  "name": "Clean Converter",
+  "short_name": "Converter",
+  "start_url": "/",
+  "display": "standalone"
+}
