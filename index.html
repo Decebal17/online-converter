@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO + Social -->
   <title>Privacy-First Online Converter | Image, Audio, Video & PDF</title>
   <meta name="description" content="All conversions run in your browser with zero file uploads. Convert images, audio, video, and PDFs on-device—secure, fast, and fully private.">
   <link rel="canonical" href="https://4993d353.onlineconverter.pages.dev/">
@@ -70,12 +69,8 @@
     .hero .badge{display:inline-block;background:#1a1c22;color:var(--muted);padding:4px 10px;border-radius:999px;font-size:12px}
     .hero .actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
   </style>
-
-  <script type="module" crossorigin src="/assets/index-C2JlvBhf.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-CZUYawoz.css">
 </head>
 <body>
-  <!-- Hero banner (static, above app) -->
   <div class="wrap">
     <section class="hero">
       <span class="badge">100% on-device · No uploads</span>
@@ -89,5 +84,8 @@
   </div>
 
   <div id="root"></div>
+
+  <!-- Vite entry (remove hashed /assets includes) -->
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
