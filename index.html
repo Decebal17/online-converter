@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- SEO + Social -->
   <title>Privacy-First Online Converter | Image, Audio, Video & PDF</title>
   <meta name="description" content="All conversions run in your browser with zero file uploads. Convert images, audio, video, and PDFs on-device—secure, fast, and fully private.">
-  <link rel="canonical" href="https://4993d353.onlineconverter.pages.dev/">
+  <link rel="canonical" href="https://online-converter.pages.dev/">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://4993d353.onlineconverter.pages.dev/">
+  <meta property="og:url" content="https://online-converter.pages.dev/">
   <meta property="og:title" content="Privacy-First Online Converter | Image, Audio, Video & PDF">
   <meta property="og:description" content="All conversions run in your browser with zero file uploads. Convert images, audio, video, and PDFs on-device—secure, fast, and fully private.">
   <meta property="og:image" content="/og-image.png">
@@ -22,6 +23,7 @@
 
   <link rel="manifest" href="/manifest.webmanifest">
 
+  <!-- Base styles used by the app -->
   <style>
     :root{--bg:#0b0c10;--card:#121317;--muted:#9aa3b2;--fg:#e6e9ef;--accent:#6ee7b7;--accent-2:#60a5fa;--ring:rgba(110,231,183,.5)}
     *{box-sizing:border-box}html,body,#root{height:100%}
@@ -45,48 +47,28 @@
     .brand{font-weight:800;letter-spacing:-.02em}
     .topbar nav a{color:var(--accent-2);text-decoration:none}
 
-    /* Hero banner */
+    /* Optional hero styles if your React banner uses them */
     .hero{
       position:relative;
       background:
         linear-gradient(135deg, rgba(110,231,183,.15), rgba(96,165,250,.15)),
         var(--card);
-      border:1px solid #1a1c22;
-      border-radius:16px;
-      padding:28px;
-      overflow:hidden;
-      margin-bottom:16px;
+      border:1px solid #1a1c22;border-radius:16px;padding:28px;overflow:hidden;margin-bottom:16px;
     }
     .hero::after{
-      content:"";
-      position:absolute; right:-80px; top:-80px;
-      width:420px; height:420px;
+      content:""; position:absolute; right:-80px; top:-80px; width:420px; height:420px;
       background:radial-gradient(circle at 30% 30%, rgba(110,231,183,.28), rgba(96,165,250,0) 60%);
       filter:blur(30px); pointer-events:none;
     }
-    .hero .title{margin:8px 0 6px}
     .hero .kicker{color:var(--muted);margin:0 0 14px}
-    .hero .badge{display:inline-block;background:#1a1c22;color:var(--muted);padding:4px 10px;border-radius:999px;font-size:12px}
     .hero .actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <section class="hero">
-      <span class="badge">100% on-device · No uploads</span>
-      <h1 class="title">Privacy-First Online Converter</h1>
-      <p class="kicker">Convert images, audio, video & PDFs locally—files never leave your browser.</p>
-      <div class="actions">
-        <button class="btn">Start converting</button>
-        <button class="btn secondary">Learn more</button>
-      </div>
-    </section>
-  </div>
-
+  <!-- React mounts here (no duplicate static banner) -->
   <div id="root"></div>
 
-  <!-- Vite entry (remove hashed /assets includes) -->
+  <!-- Vite entry -->
   <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
-
